@@ -296,7 +296,7 @@ with tabs[1]:
     if COL_STATE in view:
         state_counts = view.groupby(COL_STATE,dropna=False).size().reset_index(name="Accident_Count").sort_values("Accident_Count",ascending=False)
         l,r = st.columns([1.2,1])
-        with l: st.plotly_chart(chart_bar(view,COL_STATE,COL_STATE,15,True),use_container_width=True)
+        with l: st.plotly_chart(chart_bar(view,COL_STATE,COL_STATE,15,True),use_container_width=True,key="state_hotspots_chart")
         with r:
             st.markdown("#### Top state totals")
             st.dataframe(state_counts.head(15),use_container_width=True,hide_index=True)
