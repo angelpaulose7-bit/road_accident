@@ -1,0 +1,3 @@
+Method,Clusters,Noise records,Silhouette score
+DBSCAN,1,0,
+Hierarchical,5,0,0.06390559522555873
